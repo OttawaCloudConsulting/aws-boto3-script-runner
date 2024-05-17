@@ -68,7 +68,7 @@ git clone <repository-url>
 cd <repository-directory>
 ```
 
-2. **Create the `entrypoint.sh` Script**: Ensure that the `entrypoint.sh` script is present in the repository directory with the following content:
+2. **Create the `entrypoint-python.sh` Script**: Ensure that the `entrypoint-python.sh` script is present in the repository directory with the following content:
 
 ```bash
 #!/bin/bash
@@ -86,7 +86,7 @@ pip install -r "$REQUIREMENTS_FILE"
 python "$PYTHON_FILE"
 ```
 
-3. **Build the Docker Image**: Run the following command to build the Docker image. Make sure you are in the directory containing the Dockerfile and `entrypoint.sh`.
+3. **Build the Docker Image**: Run the following command to build the Docker image. Make sure you are in the directory containing the Dockerfile and `entrypoint-python.sh`.
 
 ```bash
 docker build -t my-python-boto3-container .
@@ -135,7 +135,7 @@ The `--rm` flag ensures that the container is removed after it exits, keeping yo
 
 ## Overriding CMD
 
-The Dockerfile is set up with a default `CMD` that runs the `entrypoint.sh` script. However, you can override this default command when you run the container. This can be useful if you want to execute a different script or command without modifying the Dockerfile or rebuilding the image.
+The Dockerfile is set up with a default `CMD` that runs the `entrypoint-python.sh` script. However, you can override this default command when you run the container. This can be useful if you want to execute a different script or command without modifying the Dockerfile or rebuilding the image.
 
 To override the `CMD`, simply provide the new command at the end of the `docker run` command. Here’s an example:
 

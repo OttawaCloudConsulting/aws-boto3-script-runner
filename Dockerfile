@@ -5,7 +5,7 @@ FROM python:3.10
 RUN pip install boto3
 
 # Set the default CMD to the entrypoint script
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+COPY entrypoint-python.sh /usr/local/bin/entrypoint-python.sh
+RUN chmod +x /usr/local/bin/entrypoint-python.sh
 
-CMD ["/usr/local/bin/entrypoint.sh"]
+CMD ["/usr/local/bin/entrypoint-python.sh"]
