@@ -1,8 +1,6 @@
 # AWS boto3 Script Runner
 Dockerfile to build a dynamic AWS Boto3 Script
 
-# Boto3 Script Execution Container
-
 ## Table of Contents
 
 - [AWS boto3 Script Runner](#aws-boto3-script-runner)
